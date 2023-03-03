@@ -21,18 +21,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
+//import androidx.fragment.app.viewModels
+
 
 /**
  * Fragment where the game is played, contains the game logic.
  */
+//private val viewModel = GameViewModel()
+
 class GameFragment : Fragment() {
-
-    private var score = 0
-    private var currentWordCount = 0
-    private var currentScrambledWord = "test"
-
+    private val viewModel: GameViewModel by viewModels()
 
     // Binding object instance with access to the views in the game_fragment.xml layout
     private lateinit var binding: GameFragmentBinding
